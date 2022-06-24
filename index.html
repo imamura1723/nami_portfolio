@@ -22,7 +22,7 @@
       </div>  
         <ul>
         <li><a href="#prf">PROFILE</a></li>
-        <li><a href="#">MAIL</a></li>
+        <li><a href="mail.html">MAIL</a></li>
       </ul>
     </nav>
     </article>
@@ -33,77 +33,59 @@
 
       <h4>WORKS</h4>
 
-      <div class="works">
+      <div id="modalOpen" class="works">
+        <div class="icon">
         <img src="images/icon-1.png" usemap="#sumple">
+      </div>
          <div class="tx">
-          <h3>Envelope</h3>
-          <p>阪急交通社<br>クリスタルハート封筒</p>
+           <h3>Envelope</h3>
+           <p>阪急交通社<br>クリスタルハート封筒</p>
+        </div>
+
+        <div id="easyModal" class="modal">
+          <div class="modal-content">
+              <span class="modalClose">×</span>
+            <div class="modal-body">
+
+            <div class="swiper">
+              <div class="swiper-wrapper">
+
+                 <div class="swiper-slide"> 
+                   <img  src="images/scan-001-1.png" usemap="sakuhin" alt="封筒1の表">
+                 </div>
+                 <div class="swiper-slide">
+                   <img src="images/scan-001-2.png" usamap="sakuhin" alt="封筒1の裏">
+                 </div>
+
+              </div>
+            </div>
+
+            </div>
+
+              <!-- 必要に応じてページネーション -->
+                 <div class="swiper-pagination"></div>
+              <!-- 必要に応じてナビボタン -->
+                 <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            <div class="modal-footer">
+              <h5>旅行冊子クリスタルハート　角2封筒</h5>
+              <p>クライアント:阪急交通社　製作時間:５時間程度　製作時期:2019年（入社1年目）</p>
+              <p>高級志向の旅行冊子、クリスタルハートの封筒デザインです。
+                 秋頃に使用されるデザインを希望されておりましたので、
+                 秋を感じられる色合い、そして厳かで上品な金を使用し製作しました。</p>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="works">
-        <img src="images/icon-2.png" usemap="#sumple">
-         <div class="tx">
-          <h3>Envelope-1</h3>
-          <p>クリスタルハート封筒<br>パターン1</p>
-        </div>
-      </div>
 
-      <div class="works">
-        <img src="images/icon-3.png" usemap="#sumple">
-         <div class="tx">
-          <h3>Envelope-2</h3>
-          <p>クリスタルハート封筒<br>パターン2</p>
-        </div>
-      </div>
 
-      <div class="works">
-        <img src="images/icon-4.png" usemap="#sumple">
-         <div class="tx">
-          <h3>Envelope-3</h3>
-          <p>クリスタルハート封筒<br>パターン3</p>
-        </div>
-      </div>
-
-      <div class="works">
-        <img src="images/sample.png" usemap="#sumple">
-         <div class="tx">
-          <h3>sumple</h3>
-          <p>サンプルあああああ<br>ああああああ</p>
-        </div>
-      </div>
-
-      <div class="works">
-        <img src="images/sample.png" usemap="#sumple">
-         <div class="tx">
-          <h3>sumple</h3>
-          <p>サンプルあああ</p>
-        </div>
-      </div>
-
-      <div class="works">
-        <img src="images/sample.png" usemap="#sumple">
-         <div class="tx">
-          <h3>sumple</h3>
-          <p>サンプルあああ</p>
-        </div>
-      </div>
-
-      <div class="works">
-        <img src="images/sample.png" usemap="#sumple">
-         <div class="tx">
-          <h3>sumple</h3>
-          <p>サンプルあああ</p>
-        </div>
-      </div>
-
-      <div class="works">
-        <img src="images/sample.png" usemap="#sumple">
-         <div class="tx">
-          <h3>sumple</h3>
-          <p>サンプルあああ</p>
-        </div>
-      </div>
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="js/js.js"></script>
 
     </div>
 
