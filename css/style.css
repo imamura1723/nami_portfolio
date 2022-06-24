@@ -8,10 +8,12 @@ body{
   margin: 0;
 }
 
+/*ヘッダー*/
+
 header{
   position: fixed;
   width: 100%;
-  z-index: 10000000;
+  z-index: 100;
   background-color:rgba(255,255,255,0.2);
   border-bottom: 5px solid rgba(255,255,255,0.2);
 }
@@ -89,12 +91,16 @@ article{
   text-decoration: none;
 }
 
+/*ヘッダー終わり*/
 
-#box1{
-  padding:0% 10% 50% 10%;
+#box1,#box2,#MAILFORM{
   width: 100%;
   color: #fff;
   text-align: center;
+}
+
+#box1{
+  padding:0% 10% 50% 10%;
 }
 
 h4{
@@ -102,6 +108,8 @@ font-size: 3em;
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 padding: 10% 0 5% 0;
 }
+
+/*作品アイコン*/
 
 .works{
   display: block;
@@ -111,7 +119,7 @@ padding: 10% 0 5% 0;
   padding: 0 0px 30px 50px;
 }
 
-.works img{
+.icon img{
   border-radius: 50%;
   max-height: 100%;
   max-width: 100%;
@@ -119,20 +127,23 @@ padding: 10% 0 5% 0;
   cursor: pointer;
 }
 
-
-.works h3{
-  padding: 10% 0 0 0;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  position: relative;
-  background: linear-gradient(transparent 50%, rgb(112, 105, 105) 40%);
-
-}
-
 .tx{
   opacity: 0;
 }
 
-.works img:hover + .tx{
+.tx h3{
+  padding: 10% 0 0 0;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: relative;
+  background: linear-gradient(transparent 50%, rgb(123, 117, 117) 40%);
+}
+
+.tx p{
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.icon:hover + .tx{
   opacity: 1;
   animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
 }
@@ -151,7 +162,7 @@ padding: 10% 0 5% 0;
   }
 }
 
-.works img:hover{
+.icon img:hover{
   animation: scale 0.5s forwards;
 }
 
@@ -169,22 +180,115 @@ padding: 10% 0 5% 0;
   }
 }
 
-.works p{
-  margin: 0;
-  font-size: 0.8em;
+/*モーダル*/
+
+#MAILFORM{
+  padding:0% 10% 50% 10%;
 }
 
-/*ここからモーダル*/
 
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
 
-/*ここまでモーダル*/
+.modal-content {
+  background-color:#fff;
+  margin: 3% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-content img{
+  width: 30%;
+}
+
+@keyframes modalopen {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.modal-footer h1 {
+  margin: 1rem 0;
+}
+
+.modal-footer {
+  background:brown;
+  padding: 3px 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalClose {
+  color: darkgray;
+  font-size: 2rem;
+}
+
+.modalClose:hover {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  color: black;
+}
+
+/*モーダルの中身*/
+.swiper-wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  color: #ffffff;
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  text-align: center;
+}
+
+/* 次ページボタンのスタイル */
+.swiper-button-next {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 60px solid #555555;
+
+}
+
+/* 前ページボタンのスタイル */
+.swiper-button-prev {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 60px solid #555555;
+  transform: scale(-1, 1); /* 左右反転 */
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+ display: none;
+}
+
+/*モーダル*/
 
 #box2{
   padding:0% 10% 50% 10%;
-  color: #fff;
   height: 50px;
-  text-align: center;
-  width: 100%;
   background-color: rgba(0,0,0,0.2);
 }
 
@@ -213,6 +317,8 @@ hr{
   width: 70%;
   padding: 0 10%;
 }
+
+
 
   #container {
     text-align: center;
