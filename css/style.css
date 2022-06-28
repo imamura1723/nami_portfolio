@@ -93,7 +93,7 @@ article{
 
 /*ヘッダー終わり*/
 
-#box1,#box2,#MAILFORM{
+#box1,footer,#MAILFORM{
   width: 100%;
   color: #fff;
   text-align: center;
@@ -186,7 +186,6 @@ padding: 10% 0 5% 0;
   padding:0% 10% 50% 10%;
 }
 
-
 .modal {
   display: none;
   position: fixed;
@@ -208,7 +207,8 @@ padding: 10% 0 5% 0;
 }
 
 .modal-content img{
-  width: 30%;
+  width: 35%;
+  margin: 2% 0;
 }
 
 @keyframes modalopen {
@@ -216,24 +216,54 @@ padding: 10% 0 5% 0;
   to {opacity: 1}
 }
 
-.modal-footer h1 {
-  margin: 1rem 0;
-}
 
 .modal-footer {
   background:brown;
   padding: 3px 15px 0 15px;
   display: flex;
   justify-content: space-between;
+  text-align: left;
+}
+
+/*モーダルフッターデザイン*/
+.modal-footer h5{
+  font-size: 1.5rem;
+}
+
+.modal-footer p{
+  font-size: 0.8rem;
 }
 
 .modalClose {
-  color: darkgray;
-  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -2%;
+  left: 98%;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 6px solid brown;
+  box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.5);
+  z-index: 50000;
+  font-size: 60px;
+  color: brown;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: 0.25s;
 }
 
-.modalClose:hover {
+
+.modalClose:hover{
+  color: #fff;
+  background-color: brown;
+  border: 6px solid #fff;
   cursor: pointer;
+}
+
+.modalClose:hover + p{
+  color: #fff;
 }
 
 .modal-body {
@@ -242,6 +272,7 @@ padding: 10% 0 5% 0;
 }
 
 /*モーダルの中身*/
+
 .swiper-wrapper {
   /* wrapperのサイズを調整 */
   width: 100%;
@@ -257,6 +288,10 @@ padding: 10% 0 5% 0;
   text-align: center;
 }
 
+.swiper-button-next,.swiper-button-prev{
+  margin: 0 5%;
+}
+
 /* 次ページボタンのスタイル */
 .swiper-button-next {
   width: 0;
@@ -264,8 +299,7 @@ padding: 10% 0 5% 0;
   border-style: solid;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 60px solid #555555;
-
+  border-left: 60px solid brown;
 }
 
 /* 前ページボタンのスタイル */
@@ -275,7 +309,7 @@ padding: 10% 0 5% 0;
   border-style: solid;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 60px solid #555555;
+  border-left: 60px solid brown;
   transform: scale(-1, 1); /* 左右反転 */
 }
 
@@ -284,9 +318,17 @@ padding: 10% 0 5% 0;
  display: none;
 }
 
+.swiper-button-next,.swiper-button-prev:hover{
+}
+
+.swiper-pagination{
+}
+
+
+
 /*モーダル*/
 
-#box2{
+footer{
   padding:0% 10% 50% 10%;
   height: 50px;
   background-color: rgba(0,0,0,0.2);
